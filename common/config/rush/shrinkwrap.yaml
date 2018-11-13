@@ -12,7 +12,8 @@ dependencies:
   express: 4.16.4
   fabric-ca-client: 1.2.2
   fabric-client: 1.2.2
-  fabric-shim: 1.4.0-snapshot.36
+  fabric-contract-api: 1.4.0-snapshot.27
+  fabric-shim: 1.4.0-snapshot.37
   grpc: 1.16.0
   http-errors: 1.6.3
   lodash: 4.17.11
@@ -1277,13 +1278,9 @@ packages:
       eslint-plugin-import: ^2.14.0
     resolution:
       integrity: sha512-XWwQtf3U3zIoKO1BbHh6aUhJZQweOwSt4c2JrPDg9FP3Ltv3+YfEv7jIDB8275tVnO/qOHbfuYg3kzw6Je7uWw==
-  /eslint-config-airbnb-base/13.1.0/e6fc40a237bc5fe47df7fed7dfc4db69:
+  /eslint-config-airbnb-base/13.1.0/eslint-plugin-import@2.14.0:
     dependencies:
-      eslint: 4.19.1
-      eslint-plugin-import: /eslint-plugin-import/2.14.0/eslint@4.19.1
-      eslint-restricted-globals: 0.1.1
-      object.assign: 4.1.0
-      object.entries: 1.0.4
+      eslint-plugin-import: 2.14.0
     dev: false
     engines:
       node: '>= 4'
@@ -1308,13 +1305,10 @@ packages:
       eslint-plugin-react: ^7.11.0
     resolution:
       integrity: sha512-R9jw28hFfEQnpPau01NO5K/JWMGLi6aymiF6RsnMURjTk+MqZKllCqGK/0tOvHkPi/NWSSOU2Ced/GX++YxLnw==
-  /eslint-config-airbnb/17.1.0/e6fc40a237bc5fe47df7fed7dfc4db69:
+  /eslint-config-airbnb/17.1.0/eslint-plugin-import@2.14.0:
     dependencies:
-      eslint: 4.19.1
-      eslint-config-airbnb-base: /eslint-config-airbnb-base/13.1.0/e6fc40a237bc5fe47df7fed7dfc4db69
-      eslint-plugin-import: /eslint-plugin-import/2.14.0/eslint@4.19.1
-      object.assign: 4.1.0
-      object.entries: 1.0.4
+      eslint-config-airbnb-base: /eslint-config-airbnb-base/13.1.0/eslint-plugin-import@2.14.0
+      eslint-plugin-import: 2.14.0
     dev: false
     engines:
       node: '>= 4'
@@ -1357,27 +1351,6 @@ packages:
     dev: false
     engines:
       node: '>=4'
-    peerDependencies:
-      eslint: 2.x - 5.x
-    resolution:
-      integrity: sha512-FpuRtniD/AY6sXByma2Wr0TXvXJ4nA/2/04VPlfpmUDPOpOY264x+ILiwnrk/k4RINgDAyFZByxqPUbSQ5YE7g==
-  /eslint-plugin-import/2.14.0/eslint@4.19.1:
-    dependencies:
-      contains-path: 0.1.0
-      debug: 2.6.9
-      doctrine: 1.5.0
-      eslint: 4.19.1
-      eslint-import-resolver-node: 0.3.2
-      eslint-module-utils: 2.2.0
-      has: 1.0.3
-      lodash: 4.17.11
-      minimatch: 3.0.4
-      read-pkg-up: 2.0.0
-      resolve: 1.8.1
-    dev: false
-    engines:
-      node: '>=4'
-    id: registry.npmjs.org/eslint-plugin-import/2.14.0
     peerDependencies:
       eslint: 2.x - 5.x
     resolution:
@@ -1710,7 +1683,17 @@ packages:
       npm: ^5.5.1
     resolution:
       integrity: sha512-U9W/HEzl3yu7KGyTsTBbPwFP69L+mQNUHz0LlwdA+f931a5vr0gZ67rll1sHgXkGZOSsAahyIAFDpAfjJuJiuQ==
-  /fabric-shim/1.4.0-snapshot.36:
+  /fabric-contract-api/1.4.0-snapshot.27:
+    dependencies:
+      get-params: 0.1.2
+      reflect-metadata: 0.1.12
+    dev: false
+    engines:
+      node: ^8.9.0
+      npm: ^5.5.1
+    resolution:
+      integrity: sha512-saX7pmeKYmbBuudk2S2BHEduXauXtfQl/s3/rEkG5NMfwlPvaGYKjrhx/v8weNSchb7+FjBaxMGFjK4bPeYiEQ==
+  /fabric-shim/1.4.0-snapshot.37:
     dependencies:
       '@types/google-protobuf': 3.2.7
       '@types/node': 8.10.37
@@ -1728,7 +1711,7 @@ packages:
       npm: ^5.5.1
     hasBin: true
     resolution:
-      integrity: sha512-1ENnkRjvga21lctCmVKs1MvyzX/DxPknQDym1kDRQc8UcM5NM8xR/2Onrt+/1qLdR/plekaEHDRW9R82Cog5OQ==
+      integrity: sha512-AazNNRq0lbxQJ+xw+DYSB296aQasjofWvfGdCNTg3znpK0CAJ8jojLF0vWSPkbnOOl48/A578tuE752+MXpCwQ==
   /fast-decode-uri-component/1.0.0:
     dev: false
     resolution:
@@ -1938,6 +1921,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-6td0q+5y4gQJQzoGY2YCPdaIekE=
+  /get-params/0.1.2:
+    dev: false
+    resolution:
+      integrity: sha1-uuDfq6WIoMYNeDTA2Nwv9g7u8v4=
   /get-stream/3.0.0:
     dev: false
     engines:
@@ -3756,6 +3743,10 @@ packages:
       node: '>=0.10'
     resolution:
       integrity: sha512-1JU/8q+VgFZyxwrJ+SVIOsh+KywWGpds3NTqikiKpDMZWScmAYyKIgqkO+ARvNWJfXeXR1zxz7aHF4u4CyH6vQ==
+  /reflect-metadata/0.1.12:
+    dev: false
+    resolution:
+      integrity: sha512-n+IyV+nGz3+0q3/Yf1ra12KpCyi001bi4XFxSjbiWWjfqb52iTTtpGXmCCAOWWIAn9KEuFZKGqBERHmrtScZ3A==
   /regex-not/1.0.2:
     dependencies:
       extend-shallow: 3.0.2
@@ -4918,9 +4909,9 @@ packages:
       chai-http: 4.2.0
       config: 2.0.1
       eslint: 4.19.1
-      eslint-config-airbnb: /eslint-config-airbnb/17.1.0/e6fc40a237bc5fe47df7fed7dfc4db69
-      eslint-config-airbnb-base: /eslint-config-airbnb-base/13.1.0/e6fc40a237bc5fe47df7fed7dfc4db69
-      eslint-plugin-import: /eslint-plugin-import/2.14.0/eslint@4.19.1
+      eslint-config-airbnb: /eslint-config-airbnb/17.1.0/eslint-plugin-import@2.14.0
+      eslint-config-airbnb-base: /eslint-config-airbnb-base/13.1.0/eslint-plugin-import@2.14.0
+      eslint-plugin-import: 2.14.0
       express: 4.16.4
       fabric-ca-client: 1.2.2
       fabric-client: 1.2.2
@@ -4941,11 +4932,12 @@ packages:
     version: 0.0.0
   'file:projects/fabcar-contract.tgz':
     dependencies:
-      fabric-shim: 1.4.0-snapshot.36
+      fabric-contract-api: 1.4.0-snapshot.27
+      fabric-shim: 1.4.0-snapshot.37
     dev: false
     name: '@rush-temp/fabcar-contract'
     resolution:
-      integrity: sha512-VYb/8o/vO9UMd/k3b+bhg0goT/1qNWnSNNq866NbLTnQl5l+pbOM/MWNDMoSmYn7GuAOVGsNzDisAWA+O6SykQ==
+      integrity: sha512-UpjrHq02JFXtrxeHbnwaXfUAXd9VucGli1ka0CA14F6ZCj2hHV9oKFIkKYilsA4hm8uE0+jOP/VRohsOyUKOkw==
       tarball: 'file:projects/fabcar-contract.tgz'
     version: 0.0.0
 registry: 'https://registry.npmjs.org/'
@@ -4965,7 +4957,8 @@ specifiers:
   express: ~4.16.0
   fabric-ca-client: ~1.2.0
   fabric-client: ~1.2.0
-  fabric-shim: unstable
+  fabric-contract-api: ~1.4.0-snapshot.27
+  fabric-shim: ~1.4.0-snapshot.27
   grpc: ^1.6.0
   http-errors: ~1.6.2
   lodash: ^4.17.10
