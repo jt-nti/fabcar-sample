@@ -1,5 +1,5 @@
 {
-    "name": "fabcar",
+    "name": "fabcar-app",
     "version": "1.0.0",
     "private": true,
     "description": "Hyperledger Fabric Car Sample Application",

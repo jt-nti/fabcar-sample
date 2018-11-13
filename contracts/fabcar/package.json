@@ -1,5 +1,5 @@
 {
-	"name": "fabcar",
+	"name": "fabcar-contract",
 	"version": "1.0.0",
 	"description": "fabcar chaincode implemented in node.js",
 	"engines": {
