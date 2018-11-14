@@ -2,12 +2,16 @@
   "name": "fabcar-contract",
   "version": "1.0.0",
   "description": "fabcar chaincode implemented in node.js using the new contract API",
+  "main": "index.js",
   "engines": {
     "node": ">=8.4.0",
     "npm": ">=5.3.0"
   },
   "scripts": {
-    "start": "fabric-chaincode-node start"
+    "start": "fabric-chaincode-node start",
+    "start-dev": "fabric-chaincode-node start --peer.address=localhost:7052 --chaincode-id-name=fabcar-contract:0",
+    "install-chaincode": "docker exec cli peer chaincode install -n fabcar-contract -v 0 -p /tmp/fabcar -l node",
+    "instantiate-chaincode": "docker exec cli peer chaincode instantiate -n fabcar-contract -v 0 -l node -c '{\"Args\":[\"org.example.fabcar:instantiate\"]}' -C mychannel -P \"AND ('Org1MSP.member')\""
   },
   "engine-strict": true,
   "license": "Apache-2.0",
