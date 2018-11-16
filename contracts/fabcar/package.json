@@ -16,7 +16,7 @@
   "engine-strict": true,
   "license": "Apache-2.0",
   "dependencies": {
-    "fabric-contract-api": "~1.4.0-snapshot.27",
-    "fabric-shim": "~1.4.0-snapshot.27"
+    "fabric-contract-api": "1.4.0-snapshot.30",
+    "fabric-shim": "1.4.0-snapshot.40"
   }
 }

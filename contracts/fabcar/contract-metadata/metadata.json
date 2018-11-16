@@ -1,0 +1,141 @@
+{
+  "info": {
+    "title": "fabcar-contract",
+    "version": "1.0.0"
+  },
+  "contracts": [
+    {
+      "info": {
+        "title": "org.example.fabcar",
+        "version": "1.0.0"
+      },
+      "transactions": [
+        {
+          "transactionId": "instantiate"
+        },
+        {
+          "transactionId": "queryCar",
+          "parameters": [
+            {
+              "name": "carNumber",
+              "description": "The car number to query, e.g. CAR01",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "return": [
+            {
+              "name": "car",
+              "description": "The requested car",
+              "required": true
+            }
+          ]
+        },
+        {
+          "transactionId": "initLedger",
+          "tag": [
+            "submitTx"
+          ]
+        },
+        {
+          "transactionId": "createCar",
+          "parameters": [
+            {
+              "name": "carNumber",
+              "description": "Car number",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "make",
+              "description": "Car make",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "model",
+              "description": "Car model",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "colour",
+              "description": "Car colour",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "owner",
+              "description": "Car owner",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "tag": [
+            "submitTx"
+          ]
+        },
+        {
+          "transactionId": "queryAllCars",
+          "return": [
+            {
+              "name": "cars",
+              "description": "All the cars",
+              "required": true
+            }
+          ]
+        },
+        {
+          "transactionId": "changeCarOwner",
+          "parameters": [
+            {
+              "name": "carNumber",
+              "description": "Car number",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "owner",
+              "description": "New car owner",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "tag": [
+            "submitTx"
+          ]
+        }
+      ],
+      "namespace": "org.example.fabcar"
+    },
+    {
+      "info": {
+        "title": "org.hyperledger.fabric",
+        "version": "1.0.0"
+      },
+      "transactions": [
+        {
+          "transactionId": "GetMetadata"
+        }
+      ],
+      "namespace": "org.hyperledger.fabric"
+    }
+  ],
+  "components": {}
+}
