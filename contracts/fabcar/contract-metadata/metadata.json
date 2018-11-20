@@ -11,10 +11,17 @@
       },
       "transactions": [
         {
-          "transactionId": "instantiate"
+          "transactionId": "instantiate",
+          "tag": [
+            "submitTx"
+          ],
+          "parameters": []
         },
         {
           "transactionId": "queryCar",
+          "tag": [
+            "queryTx"
+          ],
           "parameters": [
             {
               "name": "carNumber",
@@ -37,10 +44,14 @@
           "transactionId": "initLedger",
           "tag": [
             "submitTx"
-          ]
+          ],
+          "parameters": []
         },
         {
           "transactionId": "createCar",
+          "tag": [
+            "submitTx"
+          ],
           "parameters": [
             {
               "name": "carNumber",
@@ -82,13 +93,14 @@
                 "type": "string"
               }
             }
-          ],
-          "tag": [
-            "submitTx"
           ]
         },
         {
           "transactionId": "queryAllCars",
+          "tag": [
+            "queryTx"
+          ],
+          "parameters": [],
           "return": [
             {
               "name": "cars",
@@ -99,6 +111,9 @@
         },
         {
           "transactionId": "changeCarOwner",
+          "tag": [
+            "submitTx"
+          ],
           "parameters": [
             {
               "name": "carNumber",
@@ -116,9 +131,6 @@
                 "type": "string"
               }
             }
-          ],
-          "tag": [
-            "submitTx"
           ]
         }
       ],
@@ -131,7 +143,11 @@
       },
       "transactions": [
         {
-          "transactionId": "GetMetadata"
+          "transactionId": "GetMetadata",
+          "parameters": [],
+          "tag": [
+            "queryTx"
+          ]
         }
       ],
       "namespace": "org.hyperledger.fabric"
